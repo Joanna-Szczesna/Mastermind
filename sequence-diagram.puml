@@ -1,0 +1,43 @@
+@startuml
+
+autonumber "<font color=purple><b> 000 "
+actor Użytkownik
+Użytkownik -[#purple]> Gra : Zarejestruj się
+Użytkownik  <-[#purple]- Gra : Podaj login, hasło i adres e-mail
+Użytkownik -[#purple]> Gra : Podaje login, hasło i niepoprawny adres e-mail
+Użytkownik  <-[#purple]- Gra : Dane niepoprawne, popraw dane
+Użytkownik -[#purple]> Gra : Podaje prawidłowe dane
+Użytkownik  <-[#purple]- Gra : Dane poprawne, na podany adres e-mail wysłany link aktywacyjny
+
+autonumber 10 1 "<font color=grey><b> 000 "
+Użytkownik -[#grey]> Gra : Zaloguj się
+Użytkownik  <-[#grey]- Gra : Podaj login i hasło
+Użytkownik -[#grey]> Gra : Podaje login i nieprawidłowe hasło
+Użytkownik  <-[#grey]- Gra : Podany login lub hasło są nieprawidłowe
+Użytkownik -[#grey]> Gra : Podaje prawidłowe login i hasło
+Użytkownik  <-[#grey]- Gra : Zalogowanie pomyślne
+
+autonumber 10 1 "<font color=red><b> 000 "
+Użytkownik -[#red]> Gra : Wybór ilości zgadywanych pól kodu
+Użytkownik -[#red]> Gra : Wybór ilości możliwych prób
+Użytkownik -[#red]> Gra : Wybór rozpocznij grę
+Użytkownik  <-[#red]- Gra : Wiadomość o rozpoczęciu gry
+
+autonumber 20 1 "<font color=green><b> 000  "
+Użytkownik -[#green]> Gra : Próba odgadnięcia kodu
+Użytkownik <-[#green]- Gra : Odpowiedz zwrotna
+Użytkownik <-[#green]- Gra : Informacja o wygranej / przegranej / kontunuacji gry
+
+autonumber 30 1 "<font color=blue><b> 000  "
+Użytkownik -[#blue]> Gra : Zapisz grę
+Użytkownik <-[#blue]- Gra : Podaj nazwę do zapisu stanu gry
+Użytkownik -[#blue]> Gra : Podaje nazwę do zapisu
+Użytkownik <-[#blue]- Gra : Zapisuje stan gry
+
+autonumber 40 1 "<font color=orange><b> 000  "
+Użytkownik -[#orange]> Gra : Wczytaj grę
+Użytkownik <-[#orange]- Gra : Wyświetla zapisane stany gry
+Użytkownik -[#orange]> Gra : Wybiera jeden z zapisanych stanów gry
+Użytkownik <-[#orange]- Gra : Wczytuje wybraną przez użytkownika grę
+
+@enduml
