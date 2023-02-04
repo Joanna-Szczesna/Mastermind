@@ -10,8 +10,8 @@ Gdy zawiedziesz dla Ziemi nie będzie już ratunku.
 
 ## Use Case Diagram 
 
-![Use Case Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Joanna-Szczesna/Mastermind)
+![Use Case Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Joanna-Szczesna/Mastermind/main/use_case.puml)
 
 ## Sequence Diagram
 
-![Sequence Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Joanna-Szczesna/Mastermind)
+![Sequence Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Joanna-Szczesna/Mastermind/main/sequence_diagram.puml)
