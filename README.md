@@ -64,6 +64,7 @@ REQ_FUNC_3.4. W momencie zakończenia gry prezentowany(ujawniany) jest kod wylos
 |   lp            |nazwa grupy:                          |priorytet                         |
 |----------------|-------------------------------|-----------------------------|
 |**4**| **Ustalanie kodu** |**Niezbędne**      |
+
 REQ_FUNC_4.1. Na kod składa się kombinacja kolorów w określonych pozycjach
 
 REQ_FUNC_4.2. Użytkownik wybiera ilość pozycji (ilość pól) kodu, którą będzie zgadywał
@@ -79,6 +80,7 @@ REQ_FUNC_4.3.  kolory w kodzie mogą się powtarzać
 |   lp            |nazwa grupy:                          |priorytet                         |
 |----------------|-------------------------------|-----------------------------|
 |**5**| **Możliwe modyfikacje ze strony użytkownika** |**Opcjonalne**      |
+
 REQ_FUNC_5.1. Przed rozpoczęciem rozgrywki aplikacja umożliwia definiowanie ilości pól kodu (5-7pól)
 
 REQ_FUNC_5.2. Przed rozpoczęciem rozgrywki aplikacja umożliwia definiowanie ilości możliwych prób (10-14)
@@ -92,6 +94,7 @@ REQ_FUNC_5.5. <![endif]>[rozszerzenie] Zapis gry zawiera nazwę nadaną przez u�
 |   lp            |nazwa grupy:                          |priorytet                         |
 |----------------|-------------------------------|-----------------------------|
 |**6**| **Punktacja rozgrywki** |**Opcjonalne** |
+
 REQ_FUNC_6.1. Każda z rozgrywek jest punktowana
 
 REQ_FUNC_6.2. Podliczenie następuje w momencie zakończenia gry
@@ -157,6 +160,7 @@ REQ_FUNC_7.13. Potwierdzenie rejestracji przez użytkownika jest niezbędne do s
 |   lp            |nazwa grupy:                          |priorytet                         |
 |----------------|-------------------------------|-----------------------------|
 |**8**| **Logowanie** |**Opcjonalne** |
+
 REQ_FUNC_8.1. Aplikacja umożliwia logowanie się użytkownika
 
 REQ_FUNC_8.2. Logowanie za pomocą nazwy użytkownika oraz ustalonego przez niego hasła
