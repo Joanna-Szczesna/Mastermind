@@ -18,6 +18,9 @@ Gdy zawiedziesz dla Ziemi nie będzie już ratunku.
 
 ![Sequence Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Joanna-Szczesna/Mastermind/main/sequence_diagram_save_game.puml)
 
+## Class Diagram
+
+![Sequence Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Joanna-Szczesna/Mastermind/main/class_diagram.puml)
 
 ## Wymagania funkcjonalne
 

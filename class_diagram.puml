@@ -1,0 +1,61 @@
+@startuml
+skinparam classAttributeIconSize 0
+Game *-- ScoreBoard
+Game *-- Server
+ScoreBoard *-- Puntaction
+ScoreBoard *-- ScoreBoardTable
+Server *-- State
+
+class ScoreBoard {
+  -Punctation: enum
+  -ScoreBoardTable: class
+  -updateScoreBoard()
+  +countScore()
+  +showScoreBoard(): class ScoreboardTable
+}
+
+enum Puntaction {
+ +MAXIMUM_ATTEMPTS: int 14
+ +CORRECT_PLANET_CORRECT_POSITION: int 2
+ +CORRECT_PLANET_WRONG_POSITION: int 1
+}
+
+class ScoreBoardTable {
+  -position: int
+  -score: int
+  -attempts: int
+  -name: String
+  -time: class Timestamp
+}
+
+class Server {
+  -code: ArrayList<int[8]> 
+  -State: enum
+  +generateCode()  
+  +rateAttempt(user_answer): enum State, String int [2] 
+}
+
+json JSON {
+   "state":"win/lose/continue",
+   "rates":"<0, 8>W, <0, 8>B"
+}
+
+enum State {
+ +WIN
+ +LOSE
+ +CONTINUE
+}
+
+class Game {
+  -endGame: bool False
+  -codeLength: int 0
+  -numberAttempts: int 0
+  -Server: class Server
+  -ScoreBoard: class ScoreBoard
+  -startGame()
+  -personalizeGame()
+  -getUserCode(): ArrayList<int[]>
+
+}
+
+@enduml
