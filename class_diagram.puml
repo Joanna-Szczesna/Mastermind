@@ -1,10 +1,16 @@
 @startuml
 skinparam classAttributeIconSize 0
-Game *-- ScoreBoard
-Game *-- Server
-ScoreBoard *-- Puntaction
-ScoreBoard *-- ScoreBoardTable
-Server *-- State
+Game -- rules.MiddleLayer: HTTP
+
+package rules {
+ScoreBoard -- Puntaction
+ScoreBoard -- ScoreBoardTable
+Server -- State
+MiddleLayer -- Server
+MiddleLayer -- ScoreBoard
+ScoreBoardTable -- ScoreRecord
+Server -- Hint
+
 
 class ScoreBoard {
   -Punctation: enum
@@ -21,6 +27,10 @@ enum Puntaction {
 }
 
 class ScoreBoardTable {
+  -ScoreRecords[]
+}
+
+class ScoreRecord {
   -position: int
   -score: int
   -attempts: int
@@ -32,7 +42,13 @@ class Server {
   -code: ArrayList<int[8]> 
   -State: enum
   +generateCode()  
-  +rateAttempt(user_answer): enum State, String int [2] 
+  +rateAttempt(user_answer): Hint 
+  +isEndGame(): bool
+}
+
+class Hint {
+  int colorAndPositionGusssed
+  int onlyColorGuessed
 }
 
 json JSON {
@@ -46,16 +62,27 @@ enum State {
  +CONTINUE
 }
 
+class MiddleLayer {
+  -Server: class Server
+  -ScoreBoard: class ScoreBoard
+  +rateAttempt(user_answer): enum State, String int [2] 
+}
+
+}
 class Game {
   -endGame: bool False
   -codeLength: int 0
   -numberAttempts: int 0
-  -Server: class Server
-  -ScoreBoard: class ScoreBoard
+  -MiddleLayer: class MiddleLayer
+  +UserInput
   -startGame()
-  -personalizeGame()
-  -getUserCode(): ArrayList<int[]>
-
+  -personalizeGame()  
 }
 
+interface UserInput {
+  #getUserCode(): ArrayList<int[]> 
+}
+
+class UserGui implements UserInput {
+}
 @enduml
